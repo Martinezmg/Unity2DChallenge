@@ -24,6 +24,9 @@ public class GlobalTap : MonoBehaviour
     private void OnDisable()
     {
         tap_g.Tapped -= tappedHandler;
+		
+		touchPositionRaw.SetValue(Vector2.zero);
+        touchPosition.SetValue(Vector2.zero); 
     }
 
     private void tappedHandler(object sender, System.EventArgs e)
